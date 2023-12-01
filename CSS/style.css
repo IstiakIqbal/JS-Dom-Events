@@ -1,0 +1,15 @@
+h1, p{
+    color: palevioletred;
+}
+li{
+    color: blueviolet;
+    
+}
+#unique{
+    color: mistyrose;
+    background-color: yellow;
+}
+
+.largeText{
+   font-size: 2em;
+}

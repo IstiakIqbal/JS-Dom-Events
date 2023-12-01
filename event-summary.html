@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pText">Default Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <h3 id="textHandle">Default Text</h3>
+    <button onclick="handleOnClick()">Handle Event by Add onclick function</button>
+    <button id="listener">Handle Event by Add Event Listener</button>
+</body>
+<script>
+    function handleOnClick(){
+        const h3Text = document.getElementById('textHandle');
+        h3Text.innerText = 'Text has been changed by onclick'
+    }
+    document.getElementById('listener').addEventListener('click', function(){
+        const h3Text = document.getElementById('textHandle');
+        h3Text.innerText = 'Text has been changed by Add Event Listener';
+    })
+
+    document.getElementById('btn-update').addEventListener('click', function(){
+        const inputField = document.getElementById('input-field');
+        const inputText = inputField.value;
+        
+        const P = document.getElementById('pText');
+        P.innerText = inputText;
+        inputField.value = '';
+    })
+</script>
+</html>

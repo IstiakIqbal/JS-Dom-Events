@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>DOM means "Document Object Model</h1>
+    <h3>Ajke DOM er special Events</h3>
+    <button onclick="console.log(7);">Click Me</button>
+    <button onclick="console.log(65);">Another</button>
+    <button onclick="console.log('Hello World');">Hello Button</button>
+    <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
+    <button onclick="makeRed()">Make Red</button>
+    <button id="make-blue">Make Blue</button>
+    <button id="make-purple">Make Purple</button>
+    <button id="make-pink">Make Pink</button>
+    <button id="make-green">Make Green</button>
+    <button id="make-black">Make Black</button>
+</body>
+<script>
+    document.getElementById('make-black').addEventListener('click', function makeBlack(){
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
+    })
+
+     const makeGreenButton = document.getElementById('make-green');
+    makeGreenButton.addEventListener('click', function makeGreen(){
+        document.body.style.backgroundColor = 'green';
+    }
+)
+   
+
+
+    const makePinkButton = document.getElementById('make-pink');
+    makePinkButton.addEventListener('click', makePink)
+    function makePink(){
+        document.body.style.backgroundColor = 'pink';
+    }
+
+
+
+    const makePurpleButton = document.getElementById('make-purple');
+    makePurpleButton.onclick = function makePurple()
+    {
+        document.body.style.backgroundColor = 'purple';
+    }
+
+
+    const makeBlueButton = document.getElementById('make-blue');
+    makeBlueButton.onclick = makeBlue;
+
+    function makeBlue(){
+        document.body.style.backgroundColor='blue';
+    }
+
+
+    function makeRed(){
+        document.body.style.backgroundColor = 'red';
+    }
+</script>
+<script src="Js/events.js"></script>
+</html>

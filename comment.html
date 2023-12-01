@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+</head>
+<style>
+   
+</style>
+<body>
+    <div id="newsfeed">
+        <h1>Amar Facebook Post</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugit debitis iste magnam vel qu</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, voluptate!</p>
+    </div>
+    <div>
+        <textarea name="" id="comments" cols="60" rows="10"></textarea> <br>
+        <button id="post-btn">Post</button>
+    </div>
+</body>
+<script>
+        // step-1: add event listener to the post button
+    document.getElementById('post-btn').addEventListener('click', function(){
+        // step-2: get the comment from inside the text area
+        const CommentBox = document.getElementById('comments');
+        const Comment = CommentBox.value;
+
+      // step-3: set the comment  inside the comment container
+                /*
+                  1. get the comment container
+                  2. create a new element (p tag)
+                  3. set the text of the comment as innerText of the p tag
+                  4. add the p tag using appendChild
+                */
+        const p = document.createElement('p');
+        p.innerText = Comment;
+        const newsfeed = document.getElementById('newsfeed');
+        newsfeed.appendChild(p);
+        CommentBox.value = '';
+    })
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Summary</title>
+</head>
+<body>
+    <button onclick="makeGreen()">Make Green</button>
+    <button id="makeYellow">Make Yellow</button>
+    <input type="text" name="" id="text-field">
+</body>
+<script>
+    // opt 1
+    function makeGreen(){
+        document.body.style.backgroundColor = 'green'
+    }
+    // opt 2
+    document.getElementById('makeYellow').addEventListener('click', function(){
+        document.body.style.backgroundColor = 'yellow'
+    })
+    document.getElementById('text-field').addEventListener('keyup', function(event){
+        console.log(event.target.value);
+    })
+</script>
+</html>

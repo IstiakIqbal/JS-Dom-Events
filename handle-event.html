@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Handle</title>
+</head>
+<body>
+    <h1>Different types of event listener</h1>
+    <p id="pText">Default Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br> <br>
+    <h3 id="h3text">Default Text</h3>
+    <button onclick="handleOnclick()">Handle event listener using onclick</button>
+    <button id="listener">Handle event listener using Add Event Listener</button>
+</body>
+<script>
+    // method 1 
+    function handleOnclick(){
+       const h3Text =  document.getElementById('h3text');
+       h3Text.innerText = 'Inner text has been changed using Onclick'
+    }
+    //method 2
+    document.getElementById('listener').addEventListener('click', function(){
+        const h3Text = document.getElementById('h3text');
+        h3Text.innerText = 'Inner text has been changed using Add Event Listener'
+    })
+    // Method 2 Recap
+    document.getElementById('btn-update').addEventListener('click', function(){
+        const inputField = document.getElementById('input-field');
+        const inputText = inputField.value;
+
+        const p = document.getElementById('pText');
+        p.innerText = inputText;
+        inputField.value = '';
+    })
+</script>
+</html>
